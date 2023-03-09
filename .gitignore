@@ -1,3 +1,5 @@
 WEATHER_JWT
 WEATHER_CREDS
 *.p8
+__pycache__/
+.vscode/

@@ -1,6 +1,3 @@
-# weather.neherdata.com
-
-```
 {
   "py/object": "weatherkit.models.WeatherKitResponse",
   "current_weather": {
@@ -9907,4 +9904,3 @@
     }
   ]
 }
-```
