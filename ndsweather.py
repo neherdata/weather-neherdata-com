@@ -37,3 +37,4 @@ secretariat = wk_client.fetch(datasets, 40.308392, -74.069771, "US", "US/Eastern
 forecasts_json = forecasts.as_json()
 
 print(forecasts_json)
+print("Weather Data - Copyright © 2023 Apple Inc. All rights reserved. Apple Weather and Weather are trademarks of Apple Inc.")
