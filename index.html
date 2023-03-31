@@ -56,44 +56,44 @@ document["button16"].bind("click", show_values)
   </script>
 
 
-  <h1>Apple Apple WeatherKit</h1>
-  <h2>Neher Data Systems</h2>
-  
-  
-  <div id="input16">
+<h1>Apple Apple WeatherKit</h1>
+<h2>Neher Data Systems</h2>
+
+
+<div id="input16">
   <form>
-  <label for="lat">Latitude:</label><br>
-  <input type="text" id="lat" name="lat"><br>
-  <label for="long">Longitude:</label><br>
-  <input type="text" id="long" name="long">
-  <input type="button" onclick="getWeather()" value="submit">
-  <input type="button" onclick="resetForm()" value="reset">
-</form>
+    <label for="lat">Latitude:</label><br>
+    <input type="text" id="lat" name="lat"><br>
+    <label for="long">Longitude:</label><br>
+    <input type="text" id="long" name="long">
+    <input type="button" onclick="getWeather()" value="submit">
+    <input type="button" onclick="resetForm()" value="reset">
+  </form>
 
 </div>
 
-  
-  
-  <script>
-  function resetForm() {
-  document.getElementById("form").reset();
-}
-  function getWeather() {
-  document.getElementById("form").submit();
-}
-  
-    const url = "https://weatherkit.apple.com/api/v1/weather/{language}/{latitude}/{longitude}";
-    
-    const options = {
-    headers: {
-    Authorization: "Bearer 6Q************"
-  }
-};
 
-fetch(url, options)
-  .then( res => res.json() )
-  .then( data => console.log(data) );
-  </script>
+
+<script>
+  function resetForm() {
+    document.getElementById("form").reset();
+  }
+  function getWeather() {
+    document.getElementById("form").submit();
+  }
+
+  const url = "https://weatherkit.apple.com/api/v1/weather/{language}/{latitude}/{longitude}";
+
+  const options = {
+    headers: {
+      Authorization: "Bearer 6Q************"
+    }
+  };
+
+  fetch(url, options)
+    .then(res => res.json())
+    .then(data => console.log(data));
+</script>
 </body>
 
 <footer>
