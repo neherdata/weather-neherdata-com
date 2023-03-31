@@ -1,5 +1,0 @@
-steps: - name: Hello world action with: # Set the 
-    secret as an input
-      super_secret: ${{ secrets.APPLE_WEATHERKIT_p8 }} 
-    env: # Or as an environment variable
-      super_secret: ${{ secrets.APPLE_WEATHERKIT_p8 }}
