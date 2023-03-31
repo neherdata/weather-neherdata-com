@@ -5,23 +5,32 @@
   <meta charset="utf-8">
   <title>Apple WeatherKit | Neher Data Systems</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@1.0.2/dist/ace-editor-wc.min.js"
+    defer></script>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@v1.0.2/dist/ace-editor-wc.min.css">
 
   <style>
-    #codeblock {
-      width: 100%;
-      height: 640px;
+    #editor {
+      position: sticky;
+      top: "10%";
+      width: auto";
 
     }
 
-    h1 {
+    #top {
+      padding: 10px 10px 10px 10px;
+
+    }
+
+    #nds-title {
       font-family: "Lucida Console", Courier, monospace;
       font-style: oblique;
       text-align: center;
     }
 
-    h2 {
+    #nds-subtitle {
       font-family: "Lucida Console", Courier, monospace;
       font-style: oblique;
       text-align: center;
@@ -36,43 +45,18 @@
 
 </head>
 
-<script type="text/python">
-  from browser import document, html
-
-def show_values(event):
-    input = document["input16"].value
-    select = document["select16"]
-    option = select.options[select.selectedIndex].value
-    checked = document["check16"].checked
-    text = document["textarea16"].value
-    document["zone16"].clear()
-    document["zone16"] <= (f"Value in INPUT field: {input}",
-        html.BR(), f"Selected option: {option}",
-        html.BR(), f"Checkbox checked ? {checked}",
-        html.BR(), f"Value in TEXTAREA field: {text}"
-        )
-
-document["button16"].bind("click", show_values)
-  </script>
-
-
-<h1>Apple Apple WeatherKit</h1>
-<h2>Neher Data Systems</h2>
-
-
-<div id="input16">
-  <form>
-    <label for="lat">Latitude:</label><br>
-    <input type="text" id="lat" name="lat"><br>
-    <label for="long">Longitude:</label><br>
-    <input type="text" id="long" name="long">
-    <input type="button" onclick="getWeather()" value="submit">
-    <input type="button" onclick="resetForm()" value="reset">
-  </form>
-
+<div id="top">
+  <h1 id="nds-title">Apple WeatherKit</h1>
+  <h2 id="nds-subtitle">Neher Data Systems</h2>
 </div>
 
 
+
+<!-- <div id="editor">
+  <ace-editor editor-title="Ace-Editor | Apple  WeatherKit" language="json" max-lines="25"></ace-editor>
+</div> -->
+
+<script src="https://gist.github.com/tylermneher/88474bb11b61bcb31536dda242255af1.js"></script>
 
 <script>
   function resetForm() {
@@ -94,10 +78,12 @@ document["button16"].bind("click", show_values)
     .then(res => res.json())
     .then(data => console.log(data));
 </script>
+
 </body>
 
 <footer>
-  <p>© 2023 Neher Data Systems</p>
+  <p id="nds-footer-copyright">© 2023 Neher Data Systems and © 2023 Apple Inc. All rights reserved. Apple Weather and
+    Weather are trademarks of Apple Inc.</p>
 </footer>
 
 </html>
