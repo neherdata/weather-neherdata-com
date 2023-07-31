@@ -6,62 +6,18 @@
   <title>Apple WeatherKit | Neher Data Systems</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@1.0.2/dist/ace-editor-wc.min.js"
-    defer></script>
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@v1.0.2/dist/ace-editor-wc.min.css">
-
-  <style>
-    #editor {
-      position: sticky;
-      top: "10%";
-      width: auto";
-
-    }
-
-    #top {
-      padding: 10px 10px 10px 10px;
-
-    }
-
-    #nds-title {
-      font-family: "Lucida Console", Courier, monospace;
-      font-style: oblique;
-      text-align: center;
-    }
-
-    #nds-subtitle {
-      font-family: "Lucida Console", Courier, monospace;
-      font-style: oblique;
-      text-align: center;
-    }
-    #nds-desc {
-      font-family: "Lucida Console", Courier, monospace;
-      font-style: oblique;
-      text-align: center;
-    }
-    p {
-      font-family: "Lucida Console", Courier, monospace;
-      font-style: normal;
-      text-align: start;
-    }
-  </style>
-
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gist-embed@1.0.4/dist/gist-embed.min.js"></script>
 </head>
 
 <div id="top">
   <h1 id="nds-title">Apple WeatherKit</h1>
-  <h2 id="nds-subtitle">Neher Data Systems</h2>
+  <!-- <h2 id="nds-subtitle">Neher Data Systems</h2> -->
   <h3 id="nds-desc">An example of the return object for a call to Apple Weatherkit API</h2>
 </div>
 
-
-
-<!-- <div id="editor">
-  <ace-editor editor-title="Ace-Editor | Apple  WeatherKit" language="json" max-lines="25"></ace-editor>
-</div> -->
-
-<script src="https://gist.github.com/tylermneher/88474bb11b61bcb31536dda242255af1.js"></script>
+<code data-gist-id="88474bb11b61bcb31536dda242255af1" data-gist-caption="Weather for the next hour"
+  data-gist-file="next-hour.json" data-gist-line="1-200"></code>
 
 <script>
   function resetForm() {
@@ -71,7 +27,7 @@
     document.getElementById("form").submit();
   }
 
-  const url = "https://weatherkit.apple.com/api/v1/weather/{language}/{latitude}/{longitude}";
+  const url = "https://weatherkit.apple.com/api/v1/weather/en/{latitude}/{longitude}";
 
   const options = {
     headers: {
@@ -87,8 +43,15 @@
 </body>
 
 <footer>
-  <p id="nds-footer-copyright">© 2023 Neher Data Systems and © 2023 Apple Inc. All rights reserved. Apple Weather and
-    Weather are trademarks of Apple Inc.</p>
+  <div id="nds-and-apple-maps-footer-copyright">
+    <p id="nds-footer-copyright">© 2023 <a href="https://www.neherdata.com">Neher Data Systems<a /></p>
+    <p id=" apple-maps-footer-copyright">© 2023 <a
+        href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Inc.</a> All rights reserved.
+      <br>Apple Weather and Weather are
+      trademarks
+      of Apple Inc.</a>
+  </div>
+
 </footer>
 
 </html>

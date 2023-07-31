@@ -1,0 +1,57 @@
+#editor {
+    position: sticky;
+    top: "10%";
+    width: auto";
+
+  }
+
+  #top {
+    padding: 10px 10px 10px 10px;
+
+  }
+
+  #nds-title {
+    font-family: "Lucida Console", Courier, monospace;
+    font-style: oblique;
+    text-align: center;
+  }
+
+  #nds-subtitle {
+    font-family: "Lucida Console", Courier, monospace;
+    font-style: oblique;
+    text-align: center;
+  }
+  #nds-desc {
+    font-family: "Lucida Console", Courier, monospace;
+    font-style: oblique;
+    text-align: center;
+  }
+  /* #nds-and-apple-maps-footer-copyright {
+    font-family: "Lucida Console", Courier, monospace;
+    font-style: oblique;
+    text-align: center;
+} */
+  /* p {
+    font-family: "Lucida Console", Courier, monospace;
+    font-style: normal;
+    text-align: start;
+  } */
+/* html footer {
+    position: fixed;
+    width: 48%;
+    left: 0;
+    bottom: 0;
+    background-color: gainsboro;
+    color:black;
+    text-align: start;
+    font-family: "Lucida Console", Courier, monospace;
+    font-style: oblique;
+ } */
+
+html footer {
+    font-family: "Lucida Console", Courier, monospace;
+    font-style: normal;
+    text-align: start;
+    margin: 1em;
+    /* outline-style: dashed; */
+}
