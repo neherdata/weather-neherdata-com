@@ -17,5 +17,5 @@ python-dateutil==2.8.2
 requests==2.31.0
 six==1.16.0
 tomli==2.0.1
-urllib3==1.26.14
+urllib3==1.26.18
 weatherkit-python==1.0.1
